@@ -1,4 +1,4 @@
-This is my fork of original SytleCop Cmd which can be found at http://nichesoftware.co.nz/software/stylecop-cmd
+This is my fork of original StyleCop Cmd which can be found at http://nichesoftware.co.nz/software/stylecop-cmd
 
 Source for StyleCop Cmd is under the MIT license. You are free to use and adapt the source in your own applications.
 
