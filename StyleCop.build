@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<project name="StyleCop"
+         basedir="."
+         xmlns="http://nant.sf.net/release/0.85/nant.xsd">
+
+  <!-- 
+       ========================================================================
+        Directories
+       ========================================================================
+       Define properties for common locations
+    -->
+
+  <property name="base.dir" value="${project::get-base-directory()}"/>
+
+  <property name="build.dir" value="${base.dir}\build"/>
+  <property name="debug.dir" value="${build.dir}\Debug"/>
+
+  <property name="lib.dir" value="${base.dir}\lib"/>
+  <property name="res.dir" value="${base.dir}\res"/>
+  <property name="src.dir" value="${base.dir}\src"/>
+  <property name="release.dir" value="${base.dir}\releases"/>
+  <property name="tmp.dir" value="${base.dir}\releases"/>
+
+  <!-- 
+       ========================================================================
+        Prerequisites
+       ========================================================================
+    -->
+
+  <!-- Ensure MSBuild is available -->
+  <property name="msbuild.dir"
+            value="C:\WINDOWS\Microsoft.NET\Framework\v3.5"/>
+  <property name="msbuild.exe"
+            value="${path::combine(msbuild.dir, 'MSBuild.exe')}"/>
+  <fail message="MSBuild not fould in ${msbuild.dir}"
+        unless="${file::exists( msbuild.exe )}"/>
+
+  <!-- 
+       ========================================================================
+        FileSets
+       ========================================================================
+    -->
+
+  <!-- Project files for our output assemblies -->
+  <fileset id="output.projects"
+           basedir="${src.dir}">
+    <include name="StyleCop\StyleCop.csproj"/>
+  </fileset>
+
+  <!-- Files to Distribute -->
+  <zipfileset id="output.distribution"
+           basedir="${base.dir}">
+    <include name="**/*"/>
+    <exclude name="build/**/*"/>
+    <exclude name="releases/**/*"/>
+    <exclude name="res/**/*"/>
+    <exclude name="src/StyleCop/obj/**/*"/>
+    <exclude name="**/*.user"/>
+    <exclude name="**/*.suo"/>
+  </zipfileset>
+
+  <!-- 
+       ========================================================================
+        Compile.Version
+       ========================================================================
+    -->
+
+  <target name="compile.version"
+  	      description="Update version number">
+
+    <!-- First, update the build number -->
+    <version startdate="1 Jul 2008" path="version.txt" prefix="build"/>
+
+  </target>>
+
+  <!-- 
+       ========================================================================
+        Compile.Zip
+       ========================================================================
+    -->
+
+  <target name="compile.zip"
+          description="Build zip file for distribution"
+          depends="compile.version">
+
+    <zip zipfile="${release.dir}\StyleCopCmd-${build.version}.zip" ziplevel="9">
+      <fileset refid="output.distribution"/>
+    </zip>
+    
+  </target>
+
+</project>
