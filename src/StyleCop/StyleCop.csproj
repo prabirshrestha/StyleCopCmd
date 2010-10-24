@@ -52,13 +52,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.StyleCop">
-      <HintPath>..\..\..\..\Program Files\MSBuild\Microsoft\StyleCop\v4.4\Microsoft.StyleCop.dll</HintPath>
+      <HintPath>..\..\libs\StyleCop\Microsoft.StyleCop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.StyleCop.CSharp">
-      <HintPath>..\..\..\..\Program Files\MSBuild\Microsoft\StyleCop\v4.4\Microsoft.StyleCop.CSharp.dll</HintPath>
+      <HintPath>..\..\libs\StyleCop\Microsoft.StyleCop.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.StyleCop.CSharp.Rules">
-      <HintPath>..\..\..\..\Program Files\MSBuild\Microsoft\StyleCop\v4.4\Microsoft.StyleCop.CSharp.Rules.dll</HintPath>
+      <HintPath>..\..\libs\StyleCop\Microsoft.StyleCop.CSharp.Rules.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">

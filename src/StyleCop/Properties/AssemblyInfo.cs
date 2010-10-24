@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("StyleCop")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Reserve Bank of New Zealand")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("StyleCop")]
-[assembly: AssemblyCopyright("Copyright © Reserve Bank of New Zealand 2008")]
+[assembly: AssemblyCopyright("Copyright © 2008")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
