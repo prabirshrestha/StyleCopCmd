@@ -1,6 +1,11 @@
 require File.join(File.dirname(__FILE__), 'libs/albacore/albacore.rb')
 
-BASE_VERSION = '1.2.3'
+def get_version_from_file
+	file = File.new('VERSION','r')
+	return file.gets.chomp
+end
+
+BASE_VERSION = get_version_from_file
 
 CONFIGURATION   =   :Release
 
