@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using Microsoft.StyleCop;
 using System.Xml.Linq;
-using System.IO;　
 using System.Xml.Xsl;
-using System.Xml;
+using Microsoft.StyleCop;
 
 namespace StyleCop
 {
     /// <summary>
-    /// Helper class used to drive StyleCop from the commandline
+    /// Helper class used to drive StyleCop from the command line
     /// </summary>
     public class StyleCopDriver
     {

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace StyleCop
 {
     /// <summary>
-    /// Helper class used to define and parse commandline parameters that take 
+    /// Helper class used to define and parse command line parameters that take 
     /// an argument.
     /// </summary>
     public class ArgumentParameter : Parameter

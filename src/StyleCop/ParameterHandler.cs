@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace StyleCop
 {
     /// <summary>
-    /// Utility class to handle commandline arguments
+    /// Utility class to handle command line arguments
     /// </summary>
     public class ParameterHandler : IDisposable
     {

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 namespace StyleCop
 {
     /// <summary>
-    /// Represents a commandline parameter
+    /// Represents a command line parameter
     /// </summary>
     public class Parameter
     {
