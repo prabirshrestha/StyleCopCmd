@@ -1,0 +1,4 @@
+Licensed under MIT
+http://www.opensource.org/licenses/mit-license.php
+
+(http://nichesoftware.co.nz/software/stylecop-cmd#comment-158)
